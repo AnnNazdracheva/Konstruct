@@ -1,0 +1,136 @@
+.header {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+}
+.header.active {
+  display: block;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid #e6e6e6;
+}
+.header__container {
+  position: relative;
+  display: flex;
+  min-height: 4.0625rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.875rem;
+}
+.header__logo {
+  position: relative;
+  z-index: 5;
+}
+.header__menu {
+}
+.menu {
+}
+.menu__body {
+}
+.menu__list {
+  display: flex;
+  align-items: center;
+  gap: 1.875rem;
+}
+.menu__item {
+}
+.menu__link {
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 116.666667%; /* 14/12 */
+  letter-spacing: 0.0682rem;
+  transition: color 0.3s;
+}
+.menu__link:hover, 
+.menu__link.active {
+  color: #00a4e5;
+}
+.menu__icon {
+}
+.icon-menu {
+  display: none;
+}
+.icon-menu__line {
+}
+
+@media (max-width: 767.98px) {
+  .header::before {
+    z-index: 5;
+  }
+  .menu__body {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 1;
+    overflow: auto;
+    transition: left 0.3s;
+  }
+  .menu__list {
+    flex-direction: column;
+    padding-top: 100px;
+    gap: 3.125rem;
+  }
+  .menu__link {
+    font-size: 1.5625rem;
+  }
+  .icon-menu {
+    display: block;
+    position: relative;
+    z-index: 5;
+    height: 1.125rem;
+    width: 1.875rem;
+  }
+  .icon-menu__line, 
+  .icon-menu::before, 
+  .icon-menu::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color:#48555b;
+    transition: all 0.3s;
+  }
+  .icon-menu::before {
+    top: 0;
+  }
+  .icon-menu::after {
+    bottom: 0;
+  }
+  .icon-menu__line {
+    top: calc(50% - 0.0625rem);
+  }
+
+  .menu-open .icon-menu::before {
+    top: calc(50% - 0.0625rem);
+    transform: rotate(45deg);
+  }
+
+  .menu-open .icon-menu::after {
+    bottom: calc(50% - 0.0625rem);
+    transform: rotate(-45deg);
+  }
+  .menu-open .icon-menu__line {
+    left: 50%;
+    width: 0;
+  }
+
+  .menu-open .menu__body {
+    left: 0;
+  }
+}

@@ -1,0 +1,95 @@
+body {
+  background-color: #ffffff;
+  font-family: "Open Sans", serif;
+  font-size: 0.8125rem;
+  line-height: 176.923077%; /* 23/13 */
+  font-weight: 400;
+  color: #48555b;
+  letter-spacing: 0.0117rem;
+}
+.menu-open body {
+  overflow: hidden;
+}
+/* ------------------ */
+.wrapper {  
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+/* ------------------ */
+[class*="__container"] {
+  max-width: 60.625rem; /* 940p+30px */
+  margin: 0 auto;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+}
+
+/* ------------------ */
+main {
+  flex: 1 1 auto;
+}
+/* ------------------ */
+.title {
+  position: relative;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 138.888889%; /* 25/18 */
+  text-transform: uppercase;
+  letter-spacing: 0.1441rem;
+}
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: -0.625rem;
+  left: 0;
+  width: 3.125rem;
+  height: 0.125rem;
+  background-color: #00a4e5;
+}
+/* ------------------ */
+.text {
+}
+/* ------------------ */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 2.5rem;
+  min-width: 9.375rem;
+  background-color: #00a4e5;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  line-height: 138.461538%; /* 18/13 */
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s;
+}
+.button:hover {
+  background-color: #0a8dc1;
+}
+/* ------------------ */
+.label {
+  font-size: 0.6875rem;
+  line-height: 136.363636%; /* 15/11 */
+  letter-spacing: 0.0529rem;
+}
+/* ------------------ */
+
+
+
+
+/* ================== */
+
+@media (max-width: 1087px) {
+}
+
+@media (max-width: 991.98px) {
+}
+
+@media (max-width: 767.98px) {
+}
+
+@media (max-width: 479.98px) {    
+}
